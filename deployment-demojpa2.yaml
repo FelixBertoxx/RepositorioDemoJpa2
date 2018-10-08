@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demojpa2
+spec:
+  selector:
+      matchLabels:
+        app: demojpa2        
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: demojpa2                
+    spec:
+      containers:
+        - name: demojpa2
+          image: pacifico2018/demojpa2
+          ports:
+            - name: http
+              containerPort: 9004
