@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+ name: demojpa2
+spec:
+ selector:
+  app: demojpa2
+ ports:
+  - port: 80
+    targetPort: 9004
+ type: LoadBalancer
